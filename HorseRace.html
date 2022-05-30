@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div#kapsayici {
+
+            margin-top: 25px;
+
+            margin-right: 100px;
+
+            background-color: olivedrab;
+
+        }
+
+        div#bitis {
+
+            width: 10px;
+
+            height: 350px;
+
+            /* ralative posizyonu esnek yaptım rahat hareket ettirebileyim.  */
+
+            position: relative;
+
+            float: right;
+
+            background-color: red;
+
+            margin-right: 10px;
+
+        }
+
+
+        img {
+
+            width: 100px;
+
+            height: 100px;
+
+            transition: all 2s;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="kapsayici">
+
+        <div id="bitis"></div>
+
+        <img id="atbir" src="1.png">
+
+        <hr />
+
+        <img id="atiki" src="2.png">
+
+        <hr />
+
+        <img id="atuc" src="3.jpg">
+
+        <hr />
+
+        <div class="bitis">
+
+        </div>
+
+
+    </div>
+
+
+    <br><br>
+
+    <button id="btn" onclick="Baslat()"> Yarışı Başlat </button>
+
+
+
+
+</body>
+
+<script>
+
+    function Baslat() {
+
+
+        var randomNumber1 = 0;
+        var randomNumber2 = 0;
+        var randomNumber3 = 0;
+
+
+
+        setInterval(() => {
+            randomNumber1 += Math.floor(Math.random() * 100);
+            randomNumber2 += Math.floor(Math.random() * 100);
+            randomNumber3 += Math.floor(Math.random() * 100);
+
+            document.getElementById('atbir').style.marginLeft = randomNumber1 + "px";
+            document.getElementById('atiki').style.marginLeft = randomNumber2 + "px";
+            document.getElementById('atuc').style.marginLeft = randomNumber3 + "px";
+        }, 1000);
+
+
+    }
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

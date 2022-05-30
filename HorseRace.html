@@ -10,6 +10,8 @@
     <style>
         div#kapsayici {
 
+
+            
             margin-top: 25px;
 
             margin-right: 100px;
@@ -19,6 +21,8 @@
         }
 
         div#bitis {
+
+         
 
             width: 10px;
 
@@ -38,6 +42,10 @@
 
 
         img {
+            
+            position: relative;
+
+            left:  5px ;
 
             width: 100px;
 
@@ -64,7 +72,7 @@
 
         <hr />
 
-        <img id="atuc" src="3.jpg">
+        <img id="atuc" src="3.png">
 
         <hr />
 
@@ -94,17 +102,36 @@
         var randomNumber2 = 0;
         var randomNumber3 = 0;
 
+        var position1 = 5;
+        var position2 = 5;
+        var position3 = 5;
 
 
-        setInterval(() => {
+
+        var time = setInterval (() => {
+
             randomNumber1 += Math.floor(Math.random() * 100);
             randomNumber2 += Math.floor(Math.random() * 100);
             randomNumber3 += Math.floor(Math.random() * 100);
 
-            document.getElementById('atbir').style.marginLeft = randomNumber1 + "px";
-            document.getElementById('atiki').style.marginLeft = randomNumber2 + "px";
-            document.getElementById('atuc').style.marginLeft = randomNumber3 + "px";
+                       
+
+            document.getElementById('atbir').style.left = randomNumber1 + "px";
+            document.getElementById('atiki').style.left = randomNumber2 + "px";
+            document.getElementById('atuc').style.left = randomNumber3 + "px";
+
+            if( randomNumber1 > 1200 || randomNumber2 > 1200 || randomNumber3 > 1200 ){
+               myStopFunction();
+            }
+
+         
         }, 1000);
+
+        function myStopFunction() {
+     
+        clearInterval(time);
+
+      }
 
 
     }

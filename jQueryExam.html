@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <style>
+    #second {
+
+      margin-top: 50px;
+    }
+
+
+    #third {
+      margin-top: 50px;
+
+    }
+
+
+    #forth{
+
+      margin-top: 50px;
+
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <div>
+<h2> Question 1</h2>
+
+    <label> Number</label>
+    <input type="text" name="" id="num">
+
+    <button id="btn1"> Karesini al</button>
+
+
+  </div>
+
+  <div id="second">
+
+    <h2> Question 2</h2>
+
+    <label>Birinci sayı</label>
+    <input type="text" name="" id="num1">
+
+    <label>İkinci sayı</label>
+    <input type="text" name="" id="num2">
+
+    <label>Üçüncü sayı giriniz</label>
+    <input type="text" name="" id="num3">
+
+
+    <button id="btn2"> Hesapla </button>
+
+
+  </div>
+
+
+
+  <div id="third">
+
+    <h2>Question 3</h2>
+
+    <label>Sayı</label>
+    <input type="text" name="" id="right">
+
+
+    <button id="btn3"> Sağa kaydır </button>
+
+
+  </div>
+
+
+  <div id="forth">
+
+    <h2>Question 4</h2>
+
+    <button id="btn4.1"> Buton1 </button>
+    <button id="btn4.2"> Buton2 </button>
+    <button id="btn4.3"> Buton3 </button>
+
+
+  </div>
+
+  
+  <div id="fifth">
+
+    <h2>Question 5</h2>
+
+
+    <img id ="img1" src="" alt="">
+
+
+    <button id="btn5.1"> Buton1 </button>
+ 
+
+
+  </div>
+
+
+</body>
+
+<script>
+
+  //Ekrana bir input bir buton koy. Inputtan aldığın verinin karesini console a yazdır.
+  $("#btn1").click(function() {
+
+    var number = $("#num").val();
+
+
+    console.log(Number(number) * Number(number));
+  });
+
+
+  //Ekrana üç input bir buton koy. Butona tıkladığında inputta bulunan sayıların ortalamasını console a yazsın.
+
+ 
+  $("#btn2").click(function() {
+
+  var number1 = $("#num1").val();
+  var number2 = $("#num2").val();
+  var number3 = $("#num3").val();
+
+    var result = (Number(number1) + Number(number2) + Number(number3)) / 3;
+
+    console.log(result);
+  });
+
+
+//Ekrana bir input bir buton koy. Butona her tıkladığında BUTON inputtaki değer kadar sağa kaysın.
+
+
+  $("#btn3").click(function () {
+
+     var number4 = $("#right").val();
+
+    $("#btn3").css("margin-left", number4 + "px")
+
+  });
+
+
+  //Ekrana 3 buton koy. Butonlara herhangi bir ID veya class VERME. Hangi butona tıklanırsa o yok olsun.
+
+  $("button").click(function () {
+        this.remove();
+    });
+
+    //Ekrana bir input bir img ve bir buton koy. Butona tıkladığında inputtaki değeri img in source attribute a atasın.
+    //Örneğin inputta https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png girip entera bastığında resmi
+    // source olarak atayıp ekranda gösterecek.
+
+  $("button").click(function () {
+     var newSrc = "https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png"
+
+    $("#img1").attr("scr", newSrc);
+
+    });
+
+
+
+</script>
+
+</html>

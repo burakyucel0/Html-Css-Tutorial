@@ -58,11 +58,11 @@
 
         
         <ul id="ul1">
-            <li id ="1"></li>
-            <li id ="2"></li>
-            <li id ="3"></li>
-            <li id ="4"></li>
-            <li id ="5"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
        
         </ul>
         <label> Li add line</label>
@@ -114,11 +114,12 @@
         //Ekrana içerisinde 5 adet li elemanı olan bir ul koy. Daha sonra bir input ve bir buton koy. 
         //Butona her tıkladığında inputtan aldığı veriyi yeni bir li elementi olarak eklesin.
         
-        var i = 1
+  
+        
         $("#btn7").click(function () {
           
-        $("#"+i).append( $("#input3").val() );
-        i++;
+        $("#ul1").append("<li>"+ $("#input3").val() + "</li>");
+  
 
     });
      

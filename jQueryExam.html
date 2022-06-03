@@ -97,7 +97,7 @@
     <h2>Question 5</h2>
 
 
-    <img id ="img1" src="" alt="">
+    <img src="" alt="">
 
 
     <button id="btn5.1"> Buton1 </button>
@@ -106,6 +106,22 @@
 
   </div>
 
+   
+  <div id="sixth">
+
+    <h2>Question 6</h2>
+
+
+    <label>Text area</label>
+    <input type="text" id="text1">
+  
+
+
+    <button id="btn6.1"> Buton </button>
+ 
+
+
+  </div>
 
 </body>
 
@@ -144,6 +160,7 @@
      var number4 = $("#right").val();
 
     $("#btn3").css("margin-left", number4 + "px")
+    
 
   });
 
@@ -161,10 +178,14 @@
   $("button").click(function () {
      var newSrc = "https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png"
 
-    $("#img1").attr("scr", newSrc);
+     $("img").attr("src", newSrc);
 
     });
 
+
+   //Ekrana bir input bir buton koy. Butona tıkladığında inputtaki değeri butonun textinde göstersin.
+   
+  
 
 
 </script>

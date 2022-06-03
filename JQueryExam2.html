@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+    <style>
+        div {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div>
+        <button>Buton1</button>
+        <button>Buton2</button>
+        <button>Buton3</button>
+        <button>Buton4</button>
+        <button>Buton5</button>
+    </div>
+
+
+    <div>
+
+        <h1 id="h1"> Text area </h1>
+
+        <label> Metin: </label>
+        <input type="text" name="txt" value="Hello" onchange="myFunction(this.value)">
+
+
+
+    </div>
+
+
+    <div>
+
+
+        <h1 id="h12"> Text area </h1>
+        <label>Make your choice :</label>
+        <select id="s1">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+
+
+    <div >
+
+        
+        <ul id="ul1">
+            <li id ="1"></li>
+            <li id ="2"></li>
+            <li id ="3"></li>
+            <li id ="4"></li>
+            <li id ="5"></li>
+       
+        </ul>
+        <label> Li add line</label>
+        <input type="text" name="txt" value="" id ="input3" >
+        <button id = "btn7"> Add </button>
+
+
+    </div>
+
+
+
+
+    </div>
+
+    <script>
+
+        //Ekrana 5 tane buton koy. Herhangi bir butona bastığında tüm butonlar her bastığımızda 10 px sağa kaysın.
+
+        var mleft = 0;
+        $("button").click(function () {
+
+            mleft += 10;
+
+            $("button").css("margin-left", mleft + "px");
+      
+        });
+
+
+
+        //Ekrana bir adet input ve bir adet h1 oy. Inputa bir şeyler yazarken, yazdıklarım aynı anda h1 de gözüksün 
+        //( input onchange get value olarak aratabilirsin. )
+
+
+        function myFunction(val) {
+            $("#h1").html(val);
+        }
+
+
+        //Ekrana bir adet select koy ve içerisine 10 adet option ekle ( https://www.w3schools.com/tags/tag_select.asp ) 
+        //Daha sonra ekrana bir adet h1 koy. Her option değiştiğinde yeni option içerisinde yazan text h1 e yazsın.
+
+        $("#s1").change(function () {
+
+            $("#h12").html($(this).val());
+
+        });
+
+
+        //Ekrana içerisinde 5 adet li elemanı olan bir ul koy. Daha sonra bir input ve bir buton koy. 
+        //Butona her tıkladığında inputtan aldığı veriyi yeni bir li elementi olarak eklesin.
+        
+        var i = 1
+        $("#btn7").click(function () {
+          
+        $("#"+i).append( $("#input3").val() );
+        i++;
+
+    });
+     
+
+      
+
+
+    </script>
+
+</body>
+
+</html>

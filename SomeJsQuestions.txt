@@ -1,0 +1,21 @@
+1) Ekrana bir input, bir buton bir tane p elementi koy. Butona tıkladığında inputtan aldığı değeri büyük harfle p içerisine yazdırsın.
+
+2) Ekrana bir buton bir img koy. Img e herhangi bir resim ver. Butona tıkladığında img boyutu 200*200 olsun
+
+3) Ekrana bir buton 3 tane span koy. Butona tıkladığında 3 spanın da içine “Siemens” yazsın
+
+4) Ekrana bir input, bir h1 ve bir h2 elementi ve bir buton koy. Butona tıkladığında inputtaki sayının karesini h1 e, küpünü h2 ye yazsın.
+
+Url: https://jsonplaceholder.typicode.com/users
+
+5) Yukarıdaki url de kullanıcılar bulunmaktadır. Ekrana bir ul bir li koy. Li içerisine web servisten çektiğiniz email adresleri yazılsın
+
+6) Ekrana bir h1 koy. H1 içerisine yukarıdaki servisten gelen kaç kullanıcı olduğunu yazsın.
+
+https://jsonplaceholder.typicode.com/posts
+
+7) Yukarıdaki url den çektiğin listeden title ları li içerisine yazdır. ( Fetch ile )
+
+8) Title c harfi ile başlayan kaç post var?
+
+9) Title t harfi ile BİTEN kaç adet post var

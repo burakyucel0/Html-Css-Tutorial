@@ -117,7 +117,7 @@
   
 
 
-    <button id="btn6.1"> Buton </button>
+    <button id="btn61"> Buton </button>
  
 
 
@@ -167,7 +167,7 @@
 
   //Ekrana 3 buton koy. Butonlara herhangi bir ID veya class VERME. Hangi butona tıklanırsa o yok olsun.
 
-  $("button").click(function () {
+  $("#forth button").click(function () {
         this.remove();
     });
 
@@ -175,7 +175,7 @@
     //Örneğin inputta https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png girip entera bastığında resmi
     // source olarak atayıp ekranda gösterecek.
 
-  $("button").click(function () {
+  $("#fifth button").click(function () {
      var newSrc = "https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png"
 
      $("img").attr("src", newSrc);
@@ -184,8 +184,16 @@
 
 
    //Ekrana bir input bir buton koy. Butona tıkladığında inputtaki değeri butonun textinde göstersin.
-   
+   $(function () {
+      $("#btn61").click(() => {
+        $("#btn61").html($("#text1").val());
+      });
+    });
   
+
+    //Ekrana bir input ve bir buton koy. Butona her tıkladığında ekrana h1 eklesin ve h1 in içeriğini inputtan alsın.
+
+    
 
 
 </script>

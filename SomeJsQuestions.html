@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        </script>
+    <style>
+        #img1 {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p> Questions 1 </p>
+        <input type="text" id="input1"> </input>
+        <button id="btn1"> Uppercase </button>
+        <p id="p1"> </p>
+    </div>
+
+    <div>
+        <p> Questions 2 </p>
+        <img id="img1" src="https://pbs.twimg.com/media/BQ1IUyBCMAAE-2D?format=jpg&name=small" alt="">
+        <button id="btn2"> Set 200px </button>
+
+    </div>
+
+    <div>
+        <p> Questions 3 </p>
+        <span id="spn1"> 1 </span>
+        <span id="spn2"> 2 </span>
+        <span id="spn3"> 3 </span>
+        <button id="btn3"> Set Span </button>
+    </div>
+
+    <div>
+        <p> Questions 4 </p>
+        <input type="text" name="" id="input2">
+        <h1 id ="h1"></h1>
+        <h2 id="h2"></h2>
+        <button id="btn4"> Take square and cube </button>
+
+
+    </div>
+
+
+</body>
+
+<script>
+    /* Question 1 */
+
+    $("#btn1").click(function () {
+        let Upperİnput = $("#input1").val().toUpperCase();
+        $("#p1").html(Upperİnput);
+    });
+
+    /* Question 2 */
+
+    $("#btn2").click(function () {
+        $("#img1").width(200 + "px");
+        $("#img1").height(200 + "px");
+    })
+
+    /* Questions 3 */
+    $("#btn3").click(function () {
+        $("#spn1, #spn2, #spn3").html("Siemens")
+    })
+    
+      /* Questions 4 */
+      $("#btn4").click(function () {
+        let input3 = $(input2).val();
+        $("h1").html(input3*input3);
+        $("h2").html(input3*input3*input3);
+    })
+
+</script>
+
+</html>
